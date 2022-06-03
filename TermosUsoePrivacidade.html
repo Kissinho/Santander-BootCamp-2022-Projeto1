@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!---- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Limpeza</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>  
+    <script src="https://kit.fontawesome.com/49f6ba9380.js" crossorigin="anonymous"></script>
+    <style>
+        .container-fluid{
+            padding: 0;
+        }
+        .carousel-inner, .carousel-item{
+            height: 70vh;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .carousel-caption{
+            top: 1%;
+            max-width: 40vw;
+            
+        }
+        .carousel-caption h2{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        .carousel-caption p{
+            font-size: 22px;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }.carousel-indicators li{
+           background-color: #cbb9a8;
+        }.lavagem{
+            color: #cbb9a8;
+            margin-top: 10vh;
+        }
+        .card-text li{
+            list-style-type: circle;
+        }
+        .cardplace{
+        margin-top: 10vh;
+        }
+        .card{
+            box-shadow: 5px 5px 5px lightgray;
+            color: gray;
+        
+        }
+        .sec2{
+          margin-top: 10vh;
+          background-color: #dcc7be;
+        }
+        .sec3{
+          margin-top: 10vh;
+          color: gray;
+        }
+        .sec3 h2{
+          margin-bottom: 10vh;
+          color: #cbb9a8;
+        }
+        footer{
+          background-color: #1f271b;
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+          margin-top: 10vh;
+        }
+        footer h2, footer a{
+          color: #dcc7be;
+        }
+        footer button{
+          background-color: transparent !important;
+          border-color: #dcc7be !important;
+          color: #dcc7be !important;
+        }
+        footer button:hover{
+          background-color: white !important;
+          color: black !important;
+          font-size: 1.2em;
+        }
+        footer ul li a:hover, .nav li a:hover{
+          color: white !important;
+          text-decoration: none;
+          font-size: 1.2em;
+        }
+        .nav li a{
+          color: #dcc7be;
+        }
+        .header button{
+            margin-right: 1vw;
+          
+        }
+        .headerinterno{
+            max-width: 40vw;
+            margin-left: 5vw;
+        }
+        .header{
+            background-color:#145c9e;
+            padding-top: 5vh;
+            padding-bottom: 10vh;
+        }
+        .headerinterno p{
+            color: white;
+        }
+        .headerinterno h1,h2{
+            color: #dcc7be;
+        }
+        .inputModelo input{
+          margin-top: 2vh;
+        }
+        .termoCadastro{
+          margin-top: 10vh;
+        }
+        .btnCadastrar{
+          align-items: center;
+        }
+        .h2Contato{
+          margin-top: 10vh;
+          margin-bottom: 10vh;
+          color: #cbb9a8;
+        }
+        h3{
+          color: #cbb9a8 ;
+          font-size: 1.2rem;
+        }
+        .contato{
+            max-width: 30vw;
+        }
+        .ajuda{
+            margin-top: 10vh;
+            text-align: justify;
+        }
+        .ajuda a{
+            color: #cbb9a8;
+        }
+        .ajuda a:visited{
+            color: #cbb9a8;
+        }
+        .ajuda a:hover{
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .botoes{
+            margin-top: 20vh;
+            margin-bottom: 20vh;
+        }
+        @media (max-width: 576px) { 
+  
+  .senha{
+    margin-left: 0px !important;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  
+  .carousel-caption h2, .carousel-caption p{
+    width: 80vw;
+    
+  }
+  .carousel-inner {
+    height: 120vw;
+  }
+  .carousel-inner button{
+  
+    margin-top: 3vh;
+    width: 70vw;
+  }
+  .carousel-item{
+    background-color: #145c9e;
+  }
+  .card{
+    margin: 5vh auto;
+  }
+  .realizamos{
+    margin: 0 10vw;
+  }
+  .list-unstyled{
+    margin-left: 30vw;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+  }
+  
+   }
+   @media (min-width: 576px) { 
+    
+    .senha{
+      margin-left: 0px !important;
+      margin-top: 1vh;
+      margin-bottom: 1vh;
+    }
+    
+    .carousel-caption h2, .carousel-caption p{
+      width: 80vw;
+      
+    }
+    .carousel-inner {
+      height: 120vw;
+    }
+    .carousel-inner button{
+    
+      margin-top: 3vh;
+      width: 70vw;
+    }
+    .carousel-item{
+      background-color: #145c9e;
+    }
+    .card{
+      margin: 5vh auto;
+    }
+    .realizamos{
+      margin: 0 10vw;
+    }
+    .list-unstyled{
+      margin-left: 30vw;
+      margin-top: 5vh;
+      margin-bottom: 5vh;
+    }
+    
+     }
+  
+  @media (min-width: 768px) {
+    
+    .card{
+    margin: 5vh auto;
+  }
+  .senha{
+    margin-left: 0px !important;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+  }
+  .carousel-inner {
+    height: 90vw;
+  }
+  .carousel-inner button{
+  
+    margin-top: 3vh;
+    width: 70vw;
+  }
+  .carousel-item{
+    background-color: #145c9e;
+  }
+  .list-unstyled{
+ margin: 0 auto;
+  }
+  
+    
+   }
+  
+  
+  @media (min-width: 992px) {
+    #senha{
+      max-width: 10vw;
+    }
+    #login{
+      max-width: 10vw;
+    }
+    .carousel-inner {
+    height: 90vh;
+  }
+   }
+  
+  
+  
+  
+  
+  @media (min-width: 1200px) {
+    
+  
+  }
+    </style>
+   
+        <nav class="navbar navbar-light bg-primary" style="background-color: #145c9e !important;">
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <ul class="nav d-flex flex-grow-1">
+              <li class="nav-item ml-2"><a href="ajuda.html" class="nav-link text-white">Ajuda</a></li>
+              <li class="nav-item ml-2"><a href="cadastroParceiro.html" class="nav-link text-white">Seja um parceiro</a></li>
+          </ul>
+          <input type="text" name="login" id="login" placeholder="Login" class="col-sm-12 col-lg-2">
+          <input type="password" name="senha" id="senha" placeholder="Senha" class="ml-2 col-sm-12 col-lg-2 senha">
+          <button class="btn btn-warning btn-sm col-sm-12 col-lg-1" type="submit" style="min-width: 6vw;">Entrar</button>
+        </nav>
+        <div class="pos-f-t">
+            <div class="collapse" id="navbarToggleExternalContent">
+              <div class="bg-secondary p-4" style="background-color:  #0b4f6c !important;">
+                <div class="row">
+                    <div class="col-4 d-none d-md-flex">
+                        <img src="../Site - DR.LIMPEZA/_images/logo.jpg" alt="">
+                    </div>
+                <div class="col-4">
+               <ul class="nav d-block">
+                   <li class="nav-item"><a href="index.html#tiposdelavagem" class="nav-link" >Serviços</a></li>
+                   <li class="nav-item"><a href="" class="nav-link" >Dúvidas</a></li>
+                   <li class="nav-item"><a href="" class="nav-link" >Cadastre-se</a></li>
+                   <li class="nav-item"><a href="" class="nav-link" >Contato</a></li>
+                   
+               </ul></div>
+               <div class="col-4">
+                <ul class="nav d-block ">
+                    <li class="nav-item"><a href="" class="nav-link" >Política de privacidade</a></li>
+                    <li class="nav-item"><a href="" class="nav-link" >Termos de uso</a></li>
+                    <li class="nav-item"><a href="" class="nav-link" >Quem somos</a></li>
+              
+                    
+                </ul></div></div>
+                <hr style="background-color: #dcc7be !important;">
+                <span style="color: #cbb9a8;">2022 Dr. Limpeza. Todos os direitos reservados.</span>
+              </div>
+            </div>
+      </div>
+
+    
+
+
+     
+      <section class="header align-items-center">
+          <div class="container-fluid headerinterno">
+        
+
+         
+        </div>
+    </section>
+     
+    <section>
+
+        <div class="container-fluid">
+            <div class="row  botoes">
+                <div class="col-12 d-flex justify-content-center">
+                <button class="btn btn-primary " type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Termos de Uso
+                  </button>
+                  <button class="btn btn-primary ml-2" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+                    Política de Privacidade
+                  </button></div>
+                <div class="row">
+                    <div class="col-12">
+                  <div class="collapse" id="collapseExample">
+                    <div class="card card-body">
+                        A politica de privacidade do DR LIMPEZA se aplica as pessoas, em qualquer lugar do mundo, que acessarem à plataforma DR LIMPEZA ou ao site DR LIMPEZA COM para solicitar ou fornecer serviços sob demanda.
+
+                        O DR LIMPEZA pode recolher gravar e utilizar em conexão com outros sites parceiros as informações pessoais do Usuário, incluindo, mas não se limitando a nome, foto, endereço, número de telefone, interesses, atividades, sexo e idade. O DR LIMPEZA se resguarda ao direito de gravar o IP do Usuario, o tipo e versão do browser de navegar do aparalho, a operadora de celular a posição geográfica e outros dados relativos aos serviços solicitados requarda acres Usuário, teo aparelho,
+                        
+                        O DR LIMPEZA não divulga publicamente, nem a terceiros, as informações do Usuario de modo que possam identificá-lo. Todavia, o DR LIMPEZA pode divulgar dados gerais não nominais de forma agregada com a finalidade de realizar análises, estudos melhorias no sistema e por força de ordem judicial
+                        
+                        Quando o serviço for solicitado por pessoa juridica, a divulgação de informações do Usuário e da prestação do serviço será divulgada à empresa Contratente dos serviços OOR LIMPEZA esta fortemente comprometida em manter a privacidade do Usuário quando estiver visitando o site DR LIMPEZA COM. Algumas das informaçhes mantidas no servidor do DR LIMPEZA informações que o Usuario se prontifica a fomecer através de formularios, enquanto que algumas são obtidas automaticamente. A menos que o próprio Usuário se prontifique a apresentar dados pessoais o DR LIMPEZA nunca coletará informações com base nas quais Usuários individuais possam ser identificados Informações Automaticamente Coletadas e Armazenadas
+                        
+                        O Servidor do DR LIMPEZA coleta automaticamente informações não pessoas. As informações normalmente coletadas incluem o nome de dominio de seu provedor de acesso à intemet, o endereço do protocolo de internet (P) utizado para conectar o computador do Usuário à intemet, o tipo e versão do browser do Usuario o sistema operacional e plataforma o tempo médio gesto nos Aplicativos, as paginas visitadas as informações procuradas, os horários de acesso e outras estatisticas relevantes. Tais informações extraidas ten por finalidade a mensuração do uso dos aplicativos DR LIMPEZA, bem como a administração e melhoria
+                        
+                        9.2 Algumas das páginas da LAVO ONLINE, tambem, podem depositar certas parcelas de informações, chamadas "cookies" (biscoitos), no computador do Usuario. De modo geral, um "cookie" cede um número unico ao Usuário, que fora do site cederite não possui nenhum significado Essa tecnologia não coleta informações identificadoras de um Usuário individual, apenas apresenta tais informaçes de forma global Essa tecnologia e as informações oferecidas através dels tem por objetivo aperfeiçoar a navegação nos Aplicativos da LAVO. A maioria dos web browsers permite ao Usuano rejeitar ou aceitar a caracteristica "cookie". Entretanto, importante notar que os cookies são necessários para oferecer certas caracteristicas (por exemplo, entrega customizada de informações) disponiveis no website de LAVO, Para mais informações sobre os cookies, acesse: http://www.microsoft.com/info/cookies.html nformações pessoais fomecidas pelo Usuário
+                        
+                        Para o recebimento de serviços personalizados, o Usuário terá de fornecer informações pessoais (tais como nome, endereço eletrônico, endereço fisico, telefone celular, modelo, placa de carro, entre outros durante o cadastro). Nenhuma consequência significativa resultará de sua recusa em apresentar tala informações, exceto o fato de que o Usuário não poderá obter a funcionalidade ou receber as informações que vier a solicitar.
+                        
+                        Ao encaminhar de dados pessoais o DR LIMPEZA, o Usuário permite o processamento dos dados cadastrais, conforme estabelecido nos Termos de Uso DR LIMPEZA O DR LIMPEZA somente utilizara informações pessoais para os fins que lhe forem indicados na ocasião do fornecimento. O DR LIMPEZA não divulgara vendera ou alugara informações de identificação pessoal do Usuario a qualquer outra organização, ou as permutar com ela sem antes ter comunicado ao Usuário e este ter
+                        
+                        concedido expressamente anuencia. Tais informações poderão ser repassadas a terceiros conforme exigido por lei ou por força de ordem judicial Ressalta-se que tais stomações-de identificação pessoal não tam a ver com as fomecidas ao Parcern DE LIMPEZA (Autónomos Prestador de Serviço Automotive, Náutico e ou Aeronautico) quando um serviço é solicitado pelo USUARIO dentro da plataforma mobile DR LIMPEZA Nesta circunstancia, o DR LIMPEZA disponibilizar ao Parceiro DR LIMPEZAapenas informações essenciais para facilitar o o serviço solicitado
+                        
+                        O OR LIMPEZA possui o dever de confidencialidade de todas as informações pessoais e cadastros relativos aos Usuários, assim como valores atmentes as operações financeiras advindas da operacionalização dos serviços previstos no presente termo Contudo, nillo responderá pela reparação de prejuizos que possam ser derivados de apreensão e cooptação de dados por parte de terceiros que rompendo os sistemas de segurança, consigam acessar essas informações.
+                        
+                        A avaliação do Serviço realizada pelo Usuário é confidencial e não será divulgada, exceto por ordem judicial
+                        
+                        A presente declaração de privacidade não abrange sites terceiros cujos links sejam divulgados na plataforma DR LIMPEZA sendo que esta não poderá ser responsabilizada pelas práticas de privacidade ou pelo conteúdo desses outros sites.
+                    </div>
+                  </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+      <div class="row mx-auto">
+        <div class="col-md-3 col-sm-12">
+          <ul class="list-unstyled">
+            <li> <a href="">Serviços</a></li>
+            <li> <a href="">Dúvidas</a></li>
+            <li> <a href="">Cadastre-se</a></li>
+            <li> <a href="">Contato</a></li>
+          
+          </ul>
+        </div>
+        <div class="col-md-3 col-sm-12" >
+         <ul class="list-unstyled">
+           <li> <a href="">Seja um Parceiro</a></li>
+           <li> <a href="">Política de Privacidade</a></li>
+           <li> <a href="">Termos de Uso</a></li>
+           <li> <a href="">Quem Somos</a></li>
+         
+         </ul>
+        </div>
+        <div class="col-md-4 col-sm-12">
+           <button type="button" class="btn btn-primary col-sm-12"><i class="fa-brands fa-google-play"></i> Baixe na Google Play</button>
+           <button type="button" class="btn btn-primary col-sm-12 mt-2"><i class="fa-brands fa-apple"></i> Baixe na App Store</button>
+           <h2 class="d-flex justify-content-center">Dr. Limpeza</h2>
+ 
+ 
+        </div>
+        <div class="col-md-2 col-sm-12">
+          <img src="../Site - DR.LIMPEZA/_images/logo.jpg" alt="logo do Dr. Limpeza">
+        </div>
+      </div>
+    </footer>
+<body>
+    
+      
+</body>
+</html>

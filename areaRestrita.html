@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!---- bootstrap -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. Limpeza</title>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js" integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>  
+    <script src="https://kit.fontawesome.com/49f6ba9380.js" crossorigin="anonymous"></script>
+    <style>
+        .container-fluid{
+            padding: 0;
+        }
+        .carousel-inner, .carousel-item{
+            height: 70vh;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        .carousel-caption{
+            top: 1%;
+            max-width: 40vw;
+            
+        }
+        .carousel-caption h2{
+            font-size: 50px;
+            margin-bottom: 30px;
+        }
+        .carousel-caption p{
+            font-size: 22px;
+            margin-bottom: 50px;
+            font-weight: 300;
+        }.carousel-indicators li{
+           background-color: #cbb9a8;
+        }.lavagem{
+            color: #cbb9a8;
+            margin-top: 10vh;
+        }
+        .card-text li{
+            list-style-type: circle;
+        }
+        .cardplace{
+        margin-top: 10vh;
+        }
+        .card{
+            box-shadow: 5px 5px 5px lightgray;
+            color: gray;
+        
+        }
+        .sec2{
+          margin-top: 10vh;
+          background-color: #dcc7be;
+        }
+        .sec3{
+          margin-top: 10vh;
+          color: gray;
+        }
+        .sec3 h2{
+          margin-bottom: 10vh;
+          color: #cbb9a8;
+        }
+        footer{
+          background-color: #1f271b;
+          padding-top: 10vh;
+          padding-bottom: 10vh;
+          margin-top: 10vh;
+        }
+        footer h2, footer a{
+          color: #dcc7be;
+        }
+        footer button{
+          background-color: transparent !important;
+          border-color: #dcc7be !important;
+          color: #dcc7be !important;
+        }
+        footer button:hover{
+          background-color: white !important;
+          color: black !important;
+          font-size: 1.2em;
+        }
+        footer ul li a:hover, .nav li a:hover{
+          color: white !important;
+          text-decoration: none;
+          font-size: 1.2em;
+        }
+        .nav li a{
+          color: #dcc7be;
+        }
+        .header button{
+            margin-right: 1vw;
+          
+        }
+        .headerinterno{
+            max-width: 40vw;
+            margin-left: 5vw;
+        }
+        .header{
+            background-color:#145c9e;
+            padding-top: 5vh;
+            padding-bottom: 10vh;
+        }
+        .headerinterno p{
+            color: white;
+        }
+        .headerinterno h1,h2{
+            color: #dcc7be;
+        }
+        .inputModelo input{
+          margin-top: 2vh;
+        }
+        .termoCadastro{
+          margin-top: 10vh;
+        }
+        .btnCadastrar{
+          align-items: center;
+        }
+        .h2Contato{
+          margin-top: 10vh;
+          margin-bottom: 10vh;
+          color: #cbb9a8;
+        }
+        h3{
+          color: #cbb9a8 ;
+          font-size: 1.2rem;
+        }
+        .contato{
+            max-width: 30vw;
+        }
+        .ajuda{
+            margin-top: 10vh;
+            text-align: justify;
+        }
+        .ajuda a{
+            color: #cbb9a8;
+        }
+        .ajuda a:visited{
+            color: #cbb9a8;
+        }
+        .ajuda a:hover{
+            text-decoration: none;
+            font-size: 1.2em;
+        }
+        .botoes{
+            margin-top: 20vh;
+            margin-bottom: 20vh;
+        }
+        .imgAbaixar{
+            max-width: 3vw;
+          
+            border-radius: 50%;
+        }.abaixar a{
+            color: white;
+        }
+        .abaixar a.dropdown-item{
+            color: black;
+        }
+        .abaixar .dropdown-menu{
+            color: black;
+        }
+        .abaixar{
+            margin-right: 10vw ;
+        }
+        nav{
+            min-height: 10vh;
+        }
+      .pedidos img{
+          max-width: 10vw;
+      }
+      .abaixar .dropdown-menu a:hover{
+          color: gray;
+          font-size: 1.2em;
+      }
+      .titulo{
+          margin-top: 5vh;
+          margin-bottom: 2vh;
+      }
+        
+    </style>
+   <nav class="navbar navbar-dark bg-dark d-flex justify-content-end" style="background-color: #145c9e !important;">
+       <div class="abaixar">
+    <div class="dropdown">
+        <a class=" dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-expanded="false">
+          Nome do Usuário
+        </a>
+      
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+          <a class="dropdown-item" href="#">Meu Perfil</a>
+          <a class="dropdown-item" href="#">Meus Pedidos</a>
+          <a class="dropdown-item" href="#">Voltar à Homepage</a>
+          <a class="dropdown-item" href="#">Sair</a>
+        </div>
+        <img src="https://picsum.photos/536/354" alt="" class="imgAbaixar">
+        
+      </div>
+    
+    
+    
+    </div>  
+    
+  </nav>
+
+
+  <main>
+      <div class="container  d-flex justify-content-center">
+          <div class="row titulo">
+              <div class="col-12">
+                  <h1>Resumo dos pedidos</h1>
+              </div>
+          </div>
+      </div>
+
+      <div class="container pedidos">
+          <div class="row">
+              <div class="col-3 d-flex justify-content-center">
+                  
+                  <ul class="list-group">
+                    <li class="list-group-item"><img src="https://picsum.photos/536/354" alt=""></li>
+                    <li class="list-group-item"> <a href="#">Resumo</a> </li>
+                    <li class="list-group-item"> <a href="#">Meus pedidos</a> </li>
+                    <li class="list-group-item"> <a href="#">Meus dados</a> </li>
+                    <li class="list-group-item"> <a href="#">Pagamento</a> </li>
+                    <li class="list-group-item"> <a href="#">Avaliações</a> </li>
+                    <li class="list-group-item"> <a href="#">Ajuda</a> </li>
+                   
+                  </ul>
+              </div>
+              <div class="col-9">
+                <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Data</th>
+                        <th scope="col">Parceiro</th>
+                        <th scope="col">Valor R$</th>
+                        <th scope="col">Carro</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Forma de pagamento</th>
+
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="data">05/01/2018</td>
+                        <td class="parceiro">Otto</td>
+                        <td class="valor">70</td>
+                        <td class="carro">Chevrolet Tracker</td>
+                        <td class="cidade">Brasília</td>
+                        <td class="formaPagamento">Débito, final XXXX</td>
+                        
+                      </tr>
+                      <tr>
+                        <td class="data">05/01/2018</td>
+                        <td class="parceiro">Braia</td>
+                        <td class="valor">50</td>
+                        <td class="carro">BMW 320i</td>
+                        <td class="cidade">Brasília</td>
+                        <td class="formaPagamento">Débito, final XXXX</td>
+                      </tr>
+                      <tr>
+                        <td class="data">05/01/2018</td>
+                        <td class="parceiro">João</td>
+                        <td class="valor">90</td>
+                        <td class="carro">Mercedes-Benz E300</td>
+                        <td class="cidade">Brasília</td>
+                        <td class="formaPagamento">Débito, final XXXX</td>
+                      </tr>
+                    </tbody>
+                  </table>
+              </div>
+          </div>
+      </div>
+  </main>
+
+    
+
+
+     
+    
+     
+    <section>
+
+       
+    </section>
+   <footer>
+     <div class="row mx-auto">
+       <div class="col-3">
+         <ul class="list-unstyled">
+           <li> <a href="">Serviços</a></li>
+           <li> <a href="">Dúvidas</a></li>
+           <li> <a href="">Cadastre-se</a></li>
+           <li> <a href="">Contato</a></li>
+         
+         </ul>
+       </div>
+       <div class="col-3">
+        <ul class="list-unstyled">
+          <li> <a href="">Seja um Parceiro</a></li>
+          <li> <a href="">Política de Privacidade</a></li>
+          <li> <a href="">Termos de Uso</a></li>
+          <li> <a href="">Quem Somos</a></li>
+        
+        </ul>
+       </div>
+       <div class="col-4">
+          <button type="button" class="btn btn-primary"><i class="fa-brands fa-google-play"></i> Baixe na Google Play</button>
+          <button type="button" class="btn btn-primary"><i class="fa-brands fa-apple"></i> Baixe na App Store</button>
+          <h2 class="d-flex justify-content-center">Dr. Limpeza</h2>
+
+
+       </div>
+       <div class="col-2">
+         <img src="../Site - DR.LIMPEZA/_images/logo.jpg" alt="logo do Dr. Limpeza">
+       </div>
+     </div>
+   </footer>
+
+<body>
+    
+      
+</body>
+</html>
